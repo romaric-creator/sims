@@ -1,0 +1,6 @@
+{
+  "name": "SIMS BTP Holdings",
+  "description": "Plateforme web de SIMS BTP Holdings, leader de l'ingénierie et de la construction au Cameroun (Douala, Kribi, Yaoundé).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

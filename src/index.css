@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* SIMS Holdings Colors */
+  --color-brand-primary: #006767;
+  --color-brand-primary-container: #008282;
+  --color-brand-vibrant-cyan: #00CED1;
+  --color-brand-construction-white: #F8FAFA;
+  --color-brand-deep-slate: #1A202C;
+  --color-brand-outline-variant: #bcc9c8;
+  --color-brand-on-surface: #171d1c;
+  --color-brand-on-surface-variant: #3d4949;
+  --color-brand-surface-container-low: #f0f4f4;
+  --color-brand-surface-container-highest: #dfe3e3;
+}
+
+@layer utilities {
+  .structural-gradient {
+    background: linear-gradient(135deg, rgba(0, 103, 103, 0.9) 0%, rgba(0, 206, 209, 0.75) 100%);
+  }
+}
+
+/* Base custom styles to ensure high quality presentation */
+html, body {
+  background-color: var(--color-brand-construction-white);
+  color: var(--color-brand-on-surface);
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar for refined aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f4f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #b0eeed;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #006767;
+}
