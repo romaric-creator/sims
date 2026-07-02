@@ -98,7 +98,7 @@ export default function Footer({ onOpenConsultant }: FooterProps) {
           {/* Column 3 - Liens Rapides */}
           <div>
             <h4 className="font-display font-bold text-sm text-[#006767] uppercase tracking-wider mb-6">
-              Liens Rapide
+              Liens Rapides
             </h4>
             <ul className="space-y-3">
               <li>
