@@ -1,5 +1,6 @@
 import { lazy, Suspense, useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { MessageCircle } from "lucide-react";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ConsultantAI from "./components/ConsultantAI";
@@ -50,6 +51,16 @@ function AppContent() {
       <ConsultantAI isOpen={consultantOpen} onClose={() => setConsultantOpen(false)} />
       <Footer onOpenConsultant={() => setConsultantOpen(true)} />
       <WhatsAppButton />
+
+      {!consultantOpen && (
+        <button
+          onClick={() => setConsultantOpen(true)}
+          className="fixed bottom-24 right-6 z-40 w-14 h-14 rounded-full bg-brand-primary text-white shadow-lg shadow-brand-primary/30 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:shadow-brand-primary/40 transition-all duration-200 cursor-pointer animate-bounce [animation-duration:2s] [animation-iteration-count:3]"
+          aria-label="Ouvrir l'assistant IA"
+        >
+          <MessageCircle size={24} />
+        </button>
+      )}
     </div>
   );
 }
